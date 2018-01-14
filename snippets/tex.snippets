@@ -122,6 +122,10 @@ snippet item itemize environment
 	\\begin{itemize}
 		\\item ${0}
 	\\end{itemize}
+snippet itemsep itemize environment
+	\\begin{itemize}\setlength\itemsep{${1:1.5em}}
+		\\item ${0}
+	\\end{itemize}
 snippet it \item
 	\\item ${1:${VISUAL}}
 # Description
@@ -246,7 +250,7 @@ snippet fcite \footcite[]{}
 	\\footcite[${1}]{${2}}${0}
 #Formating text: italic, bold, underline, small capital, emphase ..
 snippet ita italic text
-	\\textit{${1:${VISUAL:text}}}${0}
+	\\textit{${1:${VISUAL:text}} ${0}
 snippet bf bold face text
 	\\textbf{${1:${VISUAL:text}}}${0}
 snippet under underline text
@@ -254,9 +258,9 @@ snippet under underline text
 snippet over overline text
 	\\overline{${1:${VISUAL:text}}}${0}
 snippet emp emphasize text
-	\\emph{${1:${VISUAL:text}}}${0}
+	\\emph{${1:${VISUAL:text}}} ${0}
 snippet sc small caps text
-	\\textsc{${1:${VISUAL:text}}}${0}
+	\\textsc{${1:${VISUAL:text}}} ${0}
 #Choosing font
 snippet sf sans serife text
 	\\textsf{${1:${VISUAL:text}}}${0}
@@ -281,12 +285,17 @@ snippet ft \footnote
 snippet fig figure environment (includegraphics)
 	\\begin{figure}
 	\\begin{center}
-		\\includegraphics[scale=${1}]{Figures/${2}}
+		\\includegraphics[width=${1}\textwidth]{images/${2}}
 	\\end{center}
 	\\caption{${3}}
 	\\label{fig:${4}}
 	\\end{figure}
 	${0}
+snippet vsp vspace
+	\vspace{${1:0.1}cm}
+	${0}
+snippet sep
+	\setlength\itemsep{${1:1.5em}}
 snippet tikz figure environment (tikzpicture)
 	\\begin{figure}[htpb]
 	\\begin{center}
