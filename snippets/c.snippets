@@ -59,6 +59,17 @@ snippet guard
 
 	#endif /* end of include guard: $1 */
 
+# Disable C++ name mangling in C headers
+snippet nocxx
+	#ifdef __cplusplus
+	extern "C" {
+	#endif
+
+	${0}
+
+	#ifdef __cplusplus
+	} /* extern "C" */
+	#endif
 ##
 ## Control Statements
 # if

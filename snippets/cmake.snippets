@@ -2,7 +2,7 @@ snippet link
 	target_link_libraries( ${1:target} ${2:libraries} )
 	${3}
 snippet init
-	cmake_minimum_required(version ${1:2.8.2})
+	cmake_minimum_required(VERSION ${1:2.8.2})
 	project(${2:ProjectName})
 
 	find_package(${3:library})
@@ -19,7 +19,7 @@ snippet proj
 	project(${0:Name})
 
 snippet min
-	cmake_minimum_required(version ${0:2.8.2})
+	cmake_minimum_required(VERSION ${0:2.8.2})
 
 snippet include
 	include_directories(${${0:include_dir}})
