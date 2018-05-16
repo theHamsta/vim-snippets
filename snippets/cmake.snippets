@@ -136,7 +136,7 @@ snippet cmake
 	    ${CMAKE_CURRENT_SOURCE_DIR}/include/
 		)
 
-	add_executable( $1 main.cpp ${2} )
+	add_executable( $1 main.cpp ${2} \${SOURCES})
 	${3}
 
 snippet cppflags
