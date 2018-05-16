@@ -139,8 +139,9 @@ snippet cerr
 snippet cout
 	std::cout << ${1} << std::endl;
 	${2}
+
 snippet cin
-std::cin >> ${1};${2}
+	std::cin >> ${1};${2}
 
 snippet serr
 	cerr << ${1} << endl;
@@ -160,7 +161,7 @@ snippet mem
 	
 # #include <...>
 snippet inc
-	#include <${1:stdio}>
+	#include <${1:iostream}>
 	${2}
 
 # ifndef...define...endif
