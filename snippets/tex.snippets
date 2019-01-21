@@ -39,6 +39,8 @@ snippet nuc \newunicodechar
 #DeclareMathOperator
 snippet dmo \DeclareMathOperator
 	\\DeclareMathOperator{${1}}{${2}} ${0}
+snippet utf8
+	\usepackage[utf8]{inputenc} 
 
 #DOCUMENT
 # \begin{}...\end{}
@@ -232,6 +234,8 @@ snippet page reference to a page
 	${1:page}~\\pageref{${2}} ${0}
 snippet index \index
 	\\index{${1:index}} ${0}
+snippet equation Reference to equation
+	\\Equation~\\ref{${1:eqn:}} ${0}
 #Citations
 snippet citen \citen
 	\\citen{${1}} ${0}
@@ -240,8 +244,8 @@ snippet citep \citep
 	\\citep{${1}} ${0}
 snippet citet \citet
 	\\citet{${1}} ${0}
-snippet cite \cite[]{}
-	\\cite[${1}]{${2}} ${0}
+snippet cite \cite{}
+	\\cite{${1}} ${0}
 snippet citea \citeauthor
 	\\citeauthor{${1}} ${0}
 snippet citey \citeyear
@@ -454,3 +458,17 @@ snippet ra rightarrow
 # Long right arrow
 snippet lra longrightarrow
 	\\longrightarrow {$0}
+snippet for
+	\\foreach \\${1:x} in {-${2:0},...,${3}}
+	{
+		${0}
+	}
+
+snippet node
+	\\node (${1:name}) [${2}] at (${3}) {${4}};
+snippet round_node
+	\\node (${1:name}) [rounded corners, draw, fill=${2:color}!30, text width=2cm, align=center] at (${3}) {${4}};
+snippet path
+	\\path[draw=black,->, line width=0.4mm] (${1}) -- (${2}) node[  above right] {};
+snippet vspace
+	\\vspace{${1}}
