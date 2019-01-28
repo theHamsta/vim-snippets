@@ -32,7 +32,7 @@ snippet nc \newcommand
 	\\newcommand{\\${1:cmd}}[${2:opt}]{${3:realcmd}} ${0}
 #usepackage
 snippet up \usepackage
-	\\usepackage[${1:options}]{${2:package}} ${0}
+	\\usepackage[${1}]{${2:package}} ${0}
 #newunicodechar
 snippet nuc \newunicodechar
 	\\newunicodechar{${1}}{${2:\\ensuremath}${3:tex-substitute}}} ${0}
@@ -238,18 +238,18 @@ snippet equation Reference to equation
 	\\Equation~\\ref{${1:eqn:}} ${0}
 #Citations
 snippet citen \citen
-	\\citen{${1}} ${0}
+	\\citen{${1}}${0}
 # natbib citations
 snippet citep \citep
-	\\citep{${1}} ${0}
+	\\citep{${1}}${0}
 snippet citet \citet
-	\\citet{${1}} ${0}
+	\\citet{${1}}${0}
 snippet cite \cite{}
-	\\cite{${1}} ${0}
+	\\cite{${1}}${0}
 snippet citea \citeauthor
-	\\citeauthor{${1}} ${0}
+	\\citeauthor{${1}}${0}
 snippet citey \citeyear
-	\\citeyear{${1}} ${0}
+	\\citeyear{${1}}${0}
 snippet fcite \footcite[]{}
 	\\footcite[${1}]{${2}}${0}
 #Formating text: italic, bold, underline, small capital, emphase ..
