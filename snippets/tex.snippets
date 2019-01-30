@@ -212,24 +212,24 @@ snippet fcite \footcite[]{}
 	\\footcite[${1}]{${2}}${0}
 #Formating text: italic, bold, underline, small capital, emphase ..
 snippet ita italic text
-	\\textit{${1:${VISUAL:text}} ${0}
+	\\textit{${1:${VISUAL:text}}
 snippet bf bold face text
-	\\textbf{${1:${VISUAL:text}} ${0}
+	\\textbf{${1:${VISUAL:text}}
 snippet under underline text
-	\\underline{${1:${VISUAL:text}} ${0}
+	\\underline{${1:${VISUAL:text}}
 snippet over overline text
-	\\overline{${1:${VISUAL:text}}} ${0}
+	\\overline{${1:${VISUAL:text}}}
 snippet emp emphasize text
-	\\emph{${1:${VISUAL:text}} ${0}
+	\\emph{${1:${VISUAL:text}}
 snippet sc small caps text
-	\\textsc{${1:${VISUAL:text}} ${0}
+	\\textsc{${1:${VISUAL:text}}
 #Choosing font
 snippet sf sans serife text
-	\\textsf{${1:${VISUAL:text}}} ${0}
+	\\textsf{${1:${VISUAL:text}}}
 snippet rm roman font text
-	\\textrm{${1:${VISUAL:text}}} ${0}
+	\\textrm{${1:${VISUAL:text}}}
 snippet tt typewriter (monospace) text
-	\\texttt{${1:${VISUAL:text}}} ${0}
+	\\texttt{${1:${VISUAL:text}}}
 #Math font
 snippet mf mathfrak
 	\\mathfrak{${1:${VISUAL:text}}} ${0}
@@ -379,3 +379,7 @@ snippet path
 	\\path[draw=black,->, line width=0.4mm] (${1}) -- (${2}) node[  above right] {};
 snippet vspace
 	\\vspace{${1}}
+snippet sb
+	\scalebox{${1}}{${2}}
+snippet crop
+	trim={${1:left}cm  ${2:lower} ${3:right} ${4:upper}},clip
