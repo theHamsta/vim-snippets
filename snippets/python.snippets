@@ -9,6 +9,8 @@ snippet #!3
 	# -*- coding: utf-8 -*-
 snippet im
 	import ${0:module}
+snippet fim
+	from ${1:module} import ${0:symbols}
 snippet uni
 	def __unicode__(self):
 		${0:representation}
@@ -472,12 +474,9 @@ snippet numeric "methods for emulating a numeric type" b
 	
 snippet np "import numpy as np"
 	import numpy as np
-	$1
 	
 snippet tf "import tensorflow as tf"
 	import tensorflow as tf
-	$1
 
 snippet fim "from ... import ..."
 	from ${1} import ${2}
-	${3}
