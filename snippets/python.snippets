@@ -5,15 +5,7 @@ snippet #!2
 	# -*- coding: utf-8 -*-
 snippet #!3
 	#!/usr/bin/env python3
-<<<<<<< HEAD
 snippet imp
-||||||| parent of 4ef9f27 (Update LaTex and Python snippets)
-	# -*- coding: utf-8 -*-
-snippet imp
-=======
-	# -*- coding: utf-8 -*-
-snippet im
->>>>>>> 4ef9f27 (Update LaTex and Python snippets)
 	import ${0:module}
 snippet fim
 	from ${1:module} import ${0:symbols}
@@ -22,7 +14,9 @@ snippet uni
 		${0:representation}
 snippet from
 	from ${1:package} import ${0:module}
-
+snippet init
+	def __init__(self, ${1}):
+		${2}
 # Module Docstring
 snippet docs
 	"""
@@ -86,11 +80,11 @@ snippet dcl dataclass
 			return ${0:self.$3 * self.$5}
 
 # New Function
-snippet def
+snippet deff
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
 		"""${3:docstring for $1}"""
 		${0}
-snippet deff
+snippet def
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
 		${0}
 snippet adef
@@ -127,6 +121,15 @@ snippet property
 snippet if
 	if $1:
 		${0:${VISUAL}}
+snippet match
+	pampy.match(${1},
+		${2:${VISUAL}}, ${3;}
+		)
+snippet ife
+	if ${1:condition}:
+		${2:${VISUAL}}
+	else:
+		${3:${VISUAL}}
 snippet el
 	else:
 		${0:${VISUAL}}
@@ -204,7 +207,24 @@ snippet tryef Try/Except/Else/Finally
 		${0}
 
 # if __name__ == '__main__':
+
+snippet main_argparse
+	import argparse
+
+	def main():
+		
+		parser = argparse.ArgumentParser()
+		parser.add_argument('--input_folder')
+		args = parser.parse()
+
+		${1}
+
+	if __name__ == '__main__':
+		${0:main()}
 snippet ifmain
+	def main():
+		${1}
+
 	if __name__ == '__main__':
 		${0:main()}
 # __magic__
@@ -538,3 +558,13 @@ snippet np "import numpy as np"
 	
 snippet tf "import tensorflow as tf"
 	import tensorflow as tf
+<<<<<<< HEAD
+||||||| parent of fd0eec3 (Python snippets. Add im)
+	$1
+=======
+	$1
+
+snippet fim "from ... import ..."
+	from ${1} import ${2}
+	${3}
+>>>>>>> fd0eec3 (Python snippets. Add im)
