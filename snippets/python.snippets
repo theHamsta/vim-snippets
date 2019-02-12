@@ -9,8 +9,6 @@ snippet #!3
 	# -*- coding: utf-8 -*-
 snippet im
 	import ${0:module}
-snippet fim
-	from ${1:module} import ${0:symbols}
 snippet uni
 	def __unicode__(self):
 		${0:representation}
@@ -480,3 +478,8 @@ snippet tf "import tensorflow as tf"
 
 snippet fim "from ... import ..."
 	from ${1} import ${2}
+
+snippet pdb
+	import pdb
+	pdb.set_trace()
+
