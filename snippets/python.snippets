@@ -7,8 +7,6 @@ snippet #!3
 	#!/usr/bin/env python3
 snippet imp
 	import ${0:module}
-snippet fim
-	from ${1:module} import ${0:symbols}
 snippet uni
 	def __unicode__(self):
 		${0:representation}
@@ -558,13 +556,10 @@ snippet np "import numpy as np"
 	
 snippet tf "import tensorflow as tf"
 	import tensorflow as tf
-<<<<<<< HEAD
-||||||| parent of fd0eec3 (Python snippets. Add im)
-	$1
-=======
-	$1
-
 snippet fim "from ... import ..."
 	from ${1} import ${2}
-	${3}
->>>>>>> fd0eec3 (Python snippets. Add im)
+
+snippet pdb
+	import pdb
+	pdb.set_trace()
+
