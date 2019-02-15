@@ -42,13 +42,22 @@ snippet #if
 	#endif
 # header include guard
 snippet once
-	#ifndef ${1:`toupper(vim_snippets#Filename('$1_HPP', 'UNTITLED_HPP'))`}
+	#pragma once
 
 	#define $1
 
 	${0}
 
+	#endif
+#alias of once
+snippet guard
+	#ifndef ${1:`toupper(Filename('$1_HPP', 'UNTITLED_HPP'))`}
+	#define $1
+	
+	${2:class}
+
 	#endif /* end of include guard: $1 */
+
 # Disable C++ name mangling in C headers
 snippet nocxx
 	#ifdef __cplusplus
