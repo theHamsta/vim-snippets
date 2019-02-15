@@ -43,13 +43,8 @@ snippet #if
 	#endif
 # header include guard
 snippet once
-	#ifndef ${1:`toupper(vim_snippets#Filename('$1_HPP', 'UNTITLED_HPP'))`}
+	#pragma once
 
-	#define $1
-
-	${0}
-
-	#endif /* end of include guard: $1 */
 #alias of once
 snippet guard
 	#ifndef ${1:`toupper(Filename('$1_HPP', 'UNTITLED_HPP'))`}
