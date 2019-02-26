@@ -295,6 +295,8 @@ snippet fig figure environment (includegraphics)
 	\\label{fig:${4}}
 	\\end{figure}
 	${0}
+snippet incgraphics
+	\\includegraphics[width=${1}\textwidth]{images/${2}}
 snippet vsp vspace
 	\vspace{${1:0.1}cm}
 	${0}
@@ -364,11 +366,10 @@ snippet example exampleblock environment
 		${0:${VISUAL}}
 	\\end{exampleblock}
 snippet col2 two-column environment
-	\\begin{columns}
+	\\begin{columns}[t, onlytextwidth]
 		\\begin{column}{0.5\\textwidth}
 			${1}
-		\\end{column}
-		\\begin{column}{0.5\\textwidth}
+		\\end{column}\\begin{column}{0.5\\textwidth}
 			${0}
 		\\end{column}
 	\\end{columns}
