@@ -479,3 +479,17 @@ snippet crop
 	trim={${1:left}  ${2:lower} ${3:right} ${4:upper}},clip
 snippet imgnode
 	\\node (${1:name}) [\\includegraphics[width=${1}\textwidth]{images/${2}}] at ({3}) {${4}};
+
+snippet blank
+	\mode<presentation>{
+		\setbeamercolor{background canvas}{bg=black}
+		\begin{frame}[plain,c]{}
+			\centering
+			\includegraphics[width=$1\textwidth]{$2}
+			%\begin{textblock}{6.5}(9.0,10.0)
+				%\color{white}
+				%\textbf{Conventional DSA}
+			%\end{textblock}
+		\end{frame}
+	}
+	\setbeamercolor{background canvas}{bg=white}
