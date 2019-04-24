@@ -183,4 +183,40 @@ ${1}($2){
 	${0}
 }
 endsnippet
+snippet sympy "sympy block " w
+sympy $1 sympy$0
+endsnippet
+
+priority 10000
+snippet 'sympy(.*)sympy' "evaluate sympy" wr
+`!p
+from sympy import *
+x, y, z, t = symbols('x y z t')
+k, m, n = symbols('k m n', integer=True)
+f, g, h = symbols('f g h', cls=Function)
+init_printing()
+snip.rv = eval('ccode(' + match.group(1).replace('\\', '') \
+    .replace('^', '**') \
+    .replace('{', '(') \
+    .replace('}', ')') + ')')
+`
+endsnippet
+snippet 2d "2d pystencils block " w
+pystencils2d $1 pystencils2d$0
+endsnippet
+
+priority 10000
+snippet 'pystencils2d(.*)pystencils2d' "evaluate pystencils" wr
+`!p
+from sympy import *
+from pystencils import *
+from pystencils.backends.cbackend import generate_c
+from pystencils.cpu.kernelcreation import create_kernel
+x, y, z, t = fields('x y z t: [2d]')
+k, m, n = symbols('k m n', integer=True)
+f, g, h = symbols('f g h', cls=Function)
+init_printing()
+snip.rv = eval('generate_c(create_kernel(AssignmentCollection({' + match.group(1)  + '},{})))')
+`
+endsnippet
 # vim:ft=snippets:
