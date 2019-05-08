@@ -79,11 +79,11 @@ snippet dcl dataclass
 
 # New Function
 snippet deff
-	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
+	def ${1:fname}(${2:`indent('.') ? '' : ''`}):
 		"""${3:docstring for $1}"""
 		${0}
 snippet def
-	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
+	def ${1:fname}(${2:`indent('.') ? '' : ''`}):
 		${0}
 snippet adef
 	async def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
