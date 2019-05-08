@@ -7,6 +7,12 @@ snippet #!3
 	#!/usr/bin/env python3
 snippet imp
 	import ${0:module}
+snippet maybe_pyconrad
+	try:
+		import pyconrad.autoinit
+	except Exception:
+		import mock
+		pyconrad = mock.MagicMock()
 snippet uni
 	def __unicode__(self):
 		${0:representation}
