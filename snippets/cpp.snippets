@@ -160,7 +160,6 @@ snippet mem
 
 snippet vec
 	std::vector<${1}> ${2};
-
 	
 
 # ifndef...define...endif
@@ -428,12 +427,19 @@ snippet iter
 
 # auto iterator
 snippet itera
-	for (auto ${1:i} = ${2:container}.begin(); $1 != $2.end(); ++$1) {
+	for (auto ${1:it} = ${2:container}.begin(); $1 != $2.end(); ++$1) {
+		${3:std::cout << *$1 << std::endl;}
+	}
+snippet it
+	for (auto ${1:it} = ${2:container}.begin(); $1 != $2.end(); ++$1) {
 		${3:std::cout << *$1 << std::endl;}
 	}
 ##
+##
 ## Lambdas
 # lamda (one line)
+snippet l
+	[${1}](${2}){${3}};
 snippet ld
 	[${1}](${2}){${3}};
 # lambda (multi-line)
