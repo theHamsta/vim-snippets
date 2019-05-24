@@ -36,9 +36,6 @@ snippet subdir
 snippet lib
 	add_library(${1:lib} ${${0:srcs}})
 
-snippet link
-	target_link_libraries(${1:bin} ${0:somelib})
-
 snippet bin
 	add_executable(${1:bin})
 
