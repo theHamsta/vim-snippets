@@ -375,6 +375,16 @@ snippet col2 two-column environment
 			${0}
 		\\end{column}
 	\\end{columns}
+snippet col3 three-column environment
+	\\begin{columns}[t, onlytextwidth]
+		\\begin{column}{0.33\\textwidth}
+			${1}
+		\\end{column}\\begin{column}{0.33\\textwidth}
+			${2}
+		\\end{column}\\begin{column}{0.33\\textwidth}
+			${0}
+		\\end{column}
+	\\end{columns}
 snippet multicol2 two-column environment with multicol
 	\\begin{multicols}{2}
 		${1}
