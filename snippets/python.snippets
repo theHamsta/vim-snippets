@@ -175,6 +175,11 @@ snippet .
 snippet sa self.attribute = attribute
 	self.${1:attribute} = $1
 
+snippet tryi try-import
+	try:
+		import ${1:${VISUAL}}
+	except ${2:Exception}:
+		$1 = None
 snippet try Try/Except
 	try:
 		${1:${VISUAL}}
