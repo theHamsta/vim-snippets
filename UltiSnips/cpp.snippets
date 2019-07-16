@@ -79,16 +79,16 @@ endsnippet
 
 
 snippet ctor
-	${1:`!p snip.rv = snip.basename or "name"`}::$1(${2}):
-		${3:initializerList}
-	{
-		${0}
-	}
+${1:`!p snip.rv = snip.basename or "name"`}::$1(${2}):
+	${3:initializerList}
+{
+	${0}
+}
 
-	$1::~$1()
-	{
+$1::~$1()
+{
 
-	}
+}
 endsnippet
 
 snippet ns "namespace .. (namespace)"

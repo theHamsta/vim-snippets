@@ -209,10 +209,10 @@ snippet cl
 	public:
 		$1();
 		virtual ~$1();
-		$1($1 &&) = default;",
-		$1(const $1 &) = default;",
-		$1 &operator=($1 &&) = default;",
-		$1 &operator=(const $1 &) = default;",
+		$1($1 &&) = default;
+		$1(const $1 &) = default;
+		$1 &operator=($1 &&) = default;
+		$1 &operator=(const $1 &) = default;
 
 		${2}
 	private:
@@ -314,23 +314,6 @@ snippet mu
 ## Class
 # class
 # member function implementation
-snippet mfun
-	${4:void} ${1:`Filename($1)`}::${2:memberFunction}(${3}) 
-	{
-		${0}
-	}
-
-snippet ctor
-	${1:`Filename($1)`}::$1(${2}):
-		${3:initializerList}
-	{
-		${0}
-	}
-
-	$1::~$1()
-	{
-
-	}
 
 # member function implementation without parameters
 snippet dmfun0
