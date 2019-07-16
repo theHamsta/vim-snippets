@@ -590,3 +590,5 @@ snippet mimshow "maybe pyconrad.imshow"
 	except Exception:
 		import unittest
 		pyconrad = unittest.mock.MagicMock()
+snippet ims "pyconrad.imshow"
+	pyconrad.imshow(${1}, "${2}")
