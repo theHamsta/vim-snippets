@@ -584,3 +584,9 @@ snippet m "member"
 
 snippet pm "protected member"
 	self._$1 = ${1}
+snippet mimshow "maybe pyconrad.imshow"
+	try:
+		pyconrad.autoinit
+	else:
+		import unittest
+		pyconrad = unittest.mock.MagicMock()
