@@ -348,7 +348,11 @@ snippet frame frame environment
 		${0:${VISUAL}}
 	\\end{frame}
 snippet fr frame environment
-	\\begin{frame}[${1:t}]{${2:title}}
+	\\begin{frame}[${1:t}]{${2:\\insertsectionhead}}
+		${0:${VISUAL}}
+	\\end{frame}
+snippet cfr frame environment
+	\\begin{frame}[c]{${1:\\insertsectionhead}}
 		${0:${VISUAL}}
 	\\end{frame}
 snippet block block environment
