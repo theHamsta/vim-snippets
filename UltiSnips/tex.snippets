@@ -201,7 +201,10 @@ $0
 endsnippet
 
 snippet pac "Package" b
-\usepackage`!p snip.rv='[' if t[1] else ""`${1:options}`!p snip.rv = ']' if t[1] else ""`{${2:package}}$0
+\usepackage`!p snip.rv='[' if t[1] else ""`${1}`!p snip.rv = ']' if t[1] else ""`{${2:package}}$0
+endsnippet
+snippet up "Package" b
+\usepackage`!p snip.rv='[' if t[1] else ""`${1}`!p snip.rv = ']' if t[1] else ""`{${2:package}}$0
 endsnippet
 
 snippet lp "Long parenthesis"
