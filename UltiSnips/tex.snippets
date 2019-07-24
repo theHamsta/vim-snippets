@@ -368,6 +368,67 @@ endsnippet
 
 snippet pac "usepackage - removes square braces if options removed" b
 \usepackage`!p snip.rv='[' if t[1] else ""`${1:options}`!p snip.rv = ']' if t[1] else ""`{${2:package}}$0
+$0
+endsnippet
+
+snippet sub* "Subsection"
+\subsection*{${1:${VISUAL:subsection name}}}%
+\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet ssub "Subsubsection"
+\subsubsection{${1:${VISUAL:subsubsection name}}}%
+\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet ssub* "Subsubsection"
+\subsubsection*{${1:${VISUAL:subsubsection name}}}%
+\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet par "Paragraph"
+\paragraph{${1:${VISUAL:paragraph name}}}%
+\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet subp "Subparagraph"
+\subparagraph{${1:${VISUAL:subparagraph name}}}%
+\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet ac "Acroynm normal" b
+\ac{${1:acronym}}
+$0
+endsnippet
+
+snippet acl "Acroynm expanded" b
+\acl{${1:acronym}}
+$0
+endsnippet
+
+
+
+snippet ni "Non-indented paragraph" b
+\noindent
+$0
+endsnippet
+
+snippet pac "Package" b
+\usepackage`!p snip.rv='[' if t[1] else ""`${1}`!p snip.rv = ']' if t[1] else ""`{${2:package}}$0
+endsnippet
+snippet up "Package" b
+\usepackage`!p snip.rv='[' if t[1] else ""`${1}`!p snip.rv = ']' if t[1] else ""`{${2:package}}$0
+>>>>>>> 94f2ee7 (Improve usepackage snippet)
 endsnippet
 
 snippet docls "Document Class" bA
