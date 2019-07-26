@@ -435,11 +435,11 @@ snippet node "node" b
 endsnippet
 
 snippet round_node "round_node" b
-\\node (${1:name}) [rounded corners, draw, fill=${2:color}!30, text width=2cm, align=center] `!p snip.rv='at (' if t[3] else ""`${3}`!p snip.rv = ') ' if t[3] else ""`{${4}};$0
+\\node (${1:name}) [rounded corners, draw, fill=${2:color}!30, text width=2cm, align=center, ${3}] `!p snip.rv='at (' if t[4] else ""`${4}`!p snip.rv = ') ' if t[4] else ""`{${5}};$0
 endsnippet
 
 snippet rnode "round_node" b
-\\node (${1:name}) [rounded corners, draw, fill=${2:color}!30, text width=2cm, align=center] `!p snip.rv='at (' if t[3] else ""`${3}`!p snip.rv = ') ' if t[3] else ""`{${4}};$0
+\\node (${1:name}) [rounded corners, draw, fill=${2:color}!30, text width=2cm, align=center, ${3}] `!p snip.rv='at (' if t[4] else ""`${4}`!p snip.rv = ') ' if t[4] else ""`{${5}};$0
 endsnippet
 
 snippet lp "Long parenthesis"
