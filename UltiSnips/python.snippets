@@ -778,7 +778,10 @@ snippet pmdoc "pocoo style module doc string" b
 $0
 endsnippet
 
-snippet Sym "a = sympy.Symbol('a')" b
+snippet sym "a = sympy.Symbol('a')" b
 ${1:a} = sympy.Symbol('$1'`!p snip.rv=', ' if t[2] else ""`${2})$0
+endsnippet
+snippet syms "a = sympy.Symbol('a')" b
+${1:x} = sympy.symbols('$1'`!p snip.rv=', ' if t[2] else ""`${2})$0
 endsnippet
 # vim:ft=snippets:
