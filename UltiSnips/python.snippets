@@ -784,4 +784,7 @@ endsnippet
 snippet syms "a = sympy.Symbol('a')" b
 ${1:x} = sympy.symbols('$1'`!p snip.rv=', ' if t[2] else ""`${2})$0
 endsnippet
+snippet flds "x = pystencils.fields('x')" b
+${1:x} = pystencils.fields('$1`!p snip.rv=': ' if t[2] and t[3] else ""`${2: float32}${3:[3d]}'`!p snip.rv=', ' if t[4] else ""`${4})$0
+endsnippet
 # vim:ft=snippets:
