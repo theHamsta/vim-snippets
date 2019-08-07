@@ -27,9 +27,9 @@ snippet docs
 
 # Unittest skip
 snippet sk "skip test"
-	@pytest.mark.skipif("${1}" in os.environ, reason="${2}")
+	@pytest.mark.skipif(${1:"" in os.environ}, reason="${2}")
 snippet skipif "skip test"
-	@pytest.mark.skipif("${1}" in os.environ, reason="${2}")
+	@pytest.mark.skipif(${1:"" in os.environ}, reason="${2}")
 snippet wh
 	while $1:
 		${0:${VISUAL}}
