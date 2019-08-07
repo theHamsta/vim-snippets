@@ -26,8 +26,8 @@ snippet docs
 	"""
 
 # Unittest skip
-snippet sk "skip unittests" b
-	@unittest.skip(${1:skip_reason})
+snippet sk "skip test"
+	@pytest.mark.skipif("${1}" in os.environ, reason="${2}")
 snippet skipif "skip test"
 	@pytest.mark.skipif("${1}" in os.environ, reason="${2}")
 snippet wh
