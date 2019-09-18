@@ -8,8 +8,6 @@ snippet #!3
 	# -*- coding: utf-8 -*-
 snippet im
 	import ${0:module}
-snippet dirj
-	from os.path import dirname, join
 snippet uni
 	def __unicode__(self):
 		${0:representation}
@@ -58,6 +56,9 @@ snippet cl
 			${5:super($1, self).__init__()}
 			self.$4 = $4
 			${0}
+snippet parametrize "@pytest.mark.parametrize"
+	@pytest.mark.parametrize('${1}', ${2})
+
 snippet cla
 	class ${1:class_name}:
 		"""${0:description}"""
