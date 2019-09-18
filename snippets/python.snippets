@@ -60,7 +60,7 @@ snippet cl
 			self.$4 = $4
 			${0}
 snippet parametrize "@pytest.mark.parametrize"
-	@pytest.mark.parametrize('${1}', ${2})
+	@pytest.mark.parametrize('${1}', (${2}))
 snippet cla
 	class ${1:class_name}:
 		"""${0:description}"""
