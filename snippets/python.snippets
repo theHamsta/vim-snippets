@@ -30,7 +30,7 @@ snippet docs
 # Unittest skip
 snippet sk "skip test"
 	@pytest.mark.skip(reason="${2}")
-snippet ski "skip test"
+snippet skip "skip test"
 	@pytest.mark.skipif(${1:"" in os.environ}, reason="${2}")
 snippet skipif "skip test"
 	@pytest.mark.skipif(${1:"" in os.environ}, reason="${2}")
