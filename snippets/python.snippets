@@ -62,6 +62,7 @@ snippet cl
 			self.$4 = $4
 			${0}
 snippet param "@pytest.mark.parametrize"
+	import pytest
 	@pytest.mark.parametrize('${1}', (${2}))
 snippet cla
 	class ${1:class_name}:
