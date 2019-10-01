@@ -34,6 +34,10 @@ snippet skip "skip test"
 	@pytest.mark.skipif(${1:"" in os.environ}, reason="${2}")
 snippet skipif "skip test"
 	@pytest.mark.skipif(${1:"" in os.environ}, reason="${2}")
+snippet xfa "pytest.mark.xfail"
+	@pytest.mark.xfail(reason=${1:""}, strict="${2}")
+snippet xfail "pytest.mark.xfail"
+	@pytest.mark.xfail(reason=${1:""}, strict="${2}")
 snippet wh
 	while $1:
 		${0:${VISUAL}}
