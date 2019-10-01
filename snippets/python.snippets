@@ -29,14 +29,19 @@ snippet docs
 
 # Unittest skip
 snippet sk "skip test"
+	import pytest
 	@pytest.mark.skip(reason="${2}")
 snippet skip "skip test"
+	import pytest
 	@pytest.mark.skipif(${1:"" in os.environ}, reason="${2}")
 snippet skipif "skip test"
+	import pytest
 	@pytest.mark.skipif(${1:"" in os.environ}, reason="${2}")
 snippet xfa "pytest.mark.xfail"
+	import pytest
 	@pytest.mark.xfail(reason=${1:""}, strict=${2:False})
 snippet xfail "pytest.mark.xfail"
+	import pytest
 	@pytest.mark.xfail(reason=${1:""}, strict=${2:False})
 snippet wh
 	while $1:
