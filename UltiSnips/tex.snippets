@@ -429,6 +429,9 @@ endsnippet
 snippet up "Package" b
 \usepackage`!p snip.rv='[' if t[1] else ""`${1}`!p snip.rv = ']' if t[1] else ""`{${2:package}}$0
 endsnippet
+snippet nc "newcommand" b
+\newcommand{\\${1:cmd}}`!p snip.rv='[' if t[2] else ""`${2}`!p snip.rv = ']' if t[2] else ""`{${3:command}}$0
+endsnippet
 
 snippet node "node" b
 \\node (${1:name}) [${2}] `!p snip.rv='at (' if t[3] else ""`${3}`!p snip.rv = ') ' if t[3] else ""`{${4}};$0
