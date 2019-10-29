@@ -611,7 +611,7 @@ snippet mimshow "maybe pyconrad.imshow"
 	try:
 		import pyconrad.autoinit
 	except Exception:
-		import unittest
+		import unittest.mock
 		pyconrad = unittest.mock.MagicMock()
 snippet ims "pyconrad.imshow"
 	pyconrad.imshow(${1}, "$1${2}")
