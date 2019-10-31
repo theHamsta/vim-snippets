@@ -796,7 +796,10 @@ endsnippet
 
 # Rst snippets
 snippet rcode ".. code:: X" b
-.. ::code ${1:python}
+.. code:: ${1:python}
+	${2}
+snippet code ".. code:: X" b
+.. code:: ${1:python}
 	${2}
 endsnippet
 # vim:ft=snippets:
