@@ -61,8 +61,8 @@ public:
 	virtual ~$1();
 	$1($1 &&) = default;
 	$1(const $1 &) = default;
-	auto operator=($1 &&) -> &$1  = default;
-	auto operator=(const $1 &) -> &$1  = default;
+	auto operator=($1 &&) -> $1&  = default;
+	auto operator=(const $1 &) -> $1&  = default;
 
 	${2}
 private:
