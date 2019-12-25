@@ -59,10 +59,8 @@ snippet pln "println!"
 snippet pln, "println! with format param"
 	println!("${1}{${2}}", ${3});
 snippet fmt "format!"
-	format!("${1}{${2}}", ${3});
-snippet d "dbg! debugging macro"
-	dbg!(${0:${VISUAL}});
-snippet d; "dbg! debugging macro statement"
+	format!("${1}{${2}}", ${3})
+snippet d "dbg! debugging macro statement"
 	dbg!(&${1});
 	${0}
 # Modules
