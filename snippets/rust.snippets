@@ -46,6 +46,14 @@ snippet pri "print!"
 	print!("${1}");
 snippet pri, "print! with format param"
 	print!("${1}{${2}}", ${3});
+snippet tr "trace! with format param"
+	trace!("${1}{${2}}", ${3});
+snippet err "error! with format param"
+	error!("${1}{${2}}", ${3});
+snippet inf "info! with format param"
+	info!("${1}{${2}}", ${3});
+snippet deb "debug! with format param"
+	debug!("${1}{${2}}", ${3});
 snippet pln "println!"
 	println!("${1}");
 snippet pln, "println! with format param"
@@ -53,7 +61,7 @@ snippet pln, "println! with format param"
 snippet fmt "format!"
 	format!("${1}{${2}}", ${3});
 snippet d "dbg! debugging macro"
-	dbg!(${0:${VISUAL}})
+	dbg!(${0:${VISUAL}});
 snippet d; "dbg! debugging macro statement"
 	dbg!(&${1});
 	${0}
@@ -250,3 +258,19 @@ snippet unim "unimplemented!()"
 	unimplemented!()
 snippet use "use ...;" b
 	use ${1:std::$2};
+snippet m "me trait implementation"
+	fn ${1}(&self) -> &${2} {
+		${3}
+	}
+snippet pm "me trait implementation"
+	pub fn ${1}(&self) -> ${2} {
+		${3}
+	}
+snippet mmut "me trait implementation"
+	fn ${1}(&mut self) -> ${2} {
+		${3}
+	}
+snippet pmmut "me trait implementation"
+	pub fn ${1}(&mut self) -> ${2} {
+		${3}
+	}
