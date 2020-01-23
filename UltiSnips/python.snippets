@@ -449,9 +449,6 @@ def __repr__(self):
 
 def __str__(self):
 	${2:pass}
-
-def __unicode__(self):
-	${3:pass}
 endsnippet
 
 
@@ -806,5 +803,31 @@ endsnippet
 snippet imosk "pytest.importorskip" b
 import pytest
 pytest.importorskip("${1}")
+endsnippet
+snippet new "__hash__" b
+def __hash__(self):
+	return ${1}
+
+def __eq__(self):
+	return ${2}
+endsnippet
+snippet new "__new__" b
+def __new__(cls, ${1}):
+	${2}
+endsnippet
+snippet sympy_new "__new__" b
+def __new__(cls, ${1}):
+	obj = cls.__xnew_cached_(cls, $1)
+	return obj
+
+def __new_stage2__(cls, $1):
+	obj = super().__xnew__(cls, ${2})
+	return obj
+
+
+# noinspection SpellCheckingInspection
+__xnew__ = staticmethod(__new_stage2__)
+# noinspection SpellCheckingInspection
+__xnew_cached_ = staticmethod(cacheit(__new_stage2__))
 endsnippet
 # vim:ft=snippets:
