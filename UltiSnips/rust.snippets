@@ -37,11 +37,16 @@ println!("$1"${2/..*/, /}$2);
 endsnippet
 
 snippet fmt "format!(..)"
-format!("$1"${2/..*/, /}$2);
+format!("$1"${2/..*/, /}$2)
 endsnippet
 
 snippet .it ".iter()" i
 .iter()$0
+endsnippet
+snippet br "breakpoint" b
+unsafe {
+	std::intrinsics::breakpoint();
+}
 endsnippet
 
 snippet impl "Struct/Trait implementation" b
