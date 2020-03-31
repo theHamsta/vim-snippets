@@ -834,4 +834,11 @@ __xnew__ = staticmethod(__new_stage2__)
 # noinspection SpellCheckingInspection
 __xnew_cached_ = staticmethod(cacheit(__new_stage2__))
 endsnippet
+
+
+snippet tmpfile "NamedTempFile" b
+with tempfile.NamedTemporaryFile('w', suffix='.${1}', delete=False) as f:
+	f.write(${2})
+	tmp_file = f.name
+endsnippet
 # vim:ft=snippets:
