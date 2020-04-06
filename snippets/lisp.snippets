@@ -41,6 +41,11 @@ snippet -       分隔注释
 # 类、函数、数据的定义
 snippet df      函数定义
 	(defun ${1} (${2})${3})
+snippet dpkg      函数定义
+	(defpackage ${1}
+		(:use :cl${2})${3})
+
+	(in-package $1)
 snippet dm      宏定义
 	(defmacro ${1} (${2})${3})
 snippet dg      广义函数
