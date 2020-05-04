@@ -834,18 +834,16 @@ __xnew__ = staticmethod(__new_stage2__)
 # noinspection SpellCheckingInspection
 __xnew_cached_ = staticmethod(cacheit(__new_stage2__))
 endsnippet
-<<<<<<< HEAD
 
+snippet %if "jinja_if" b
+{% if ${1} %}
+${2}`!p snip.rv='\n{% else %}\n' if t[2] else ''`${3}
+{% endif %}
+endsnippet
 
 snippet tmpfile "NamedTempFile" b
 with tempfile.NamedTemporaryFile('w', suffix='.${1}', delete=False) as f:
 	f.write(${2})
 	tmp_file = f.name
-=======
-snippet %if "jinja_if" b
-{% if ${1} %}
-${2}`!p snip.rv='\n{% else %}\n' if t[2] else ''`${3}
-{% endif %}
->>>>>>> Tune sep snippet
 endsnippet
 # vim:ft=snippets:
