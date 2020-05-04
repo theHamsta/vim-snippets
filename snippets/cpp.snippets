@@ -352,16 +352,16 @@ snippet ans
 ## Casts
 # static
 snippet sca
-	static_cast<${1:unsigned}>(${2:expr})${3}
+	static_cast<${1:unsigned}>(${2:expr)}${3}
 # dynamic
 snippet dca
-	dynamic_cast<${1:unsigned}>(${2:expr})${3}
+	dynamic_cast<${1:unsigned}>(${2:(expr)}${3}
 # reinterpret
 snippet rca
-	reinterpret_cast<${1:unsigned}>(${2:expr})${3}
+	reinterpret_cast<${1:unsigned}>(${2:expr)}${3}
 # const
 snippet cca
-	const_cast<${1:unsigned}>(${2:expr})${3}
+	const_cast<${1:unsigned}>(${2:expr)}${3}
 ## Iteration
 # for i
 snippet fori
