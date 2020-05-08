@@ -602,43 +602,43 @@ snippet fci "fullcite"
 \\fullcite{${1}}${0}
 endsnippet
 
-#snippet sympy "sympy block " w
-#sympy $1 sympy$0
-#endsnippet
+snippet sympy "sympy block " w
+sympy $1 sympy$0
+endsnippet
 
-#priority 10000
-#snippet 'sympy(.*)sympy' "evaluate sympy" wr
-#`!p
-#from sympy import *
-#x, y, z, t = symbols('x y z t')
-#k, m, n = symbols('k m n', integer=True)
-#f, g, h = symbols('f g h', cls=Function)
-#init_printing()
-#snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
-    #.replace('^', '**') \
-    #.replace('{', '(') \
-    #.replace('}', ')') + ')')
-#`
-#endsnippet
+priority 10000
+snippet 'sympy(.*)sympy' "evaluate sympy" wr
+`!p
+from sympy import *
+x, y, z, t = symbols('x y z t')
+k, m, n = symbols('k m n', integer=True)
+f, g, h = symbols('f g h', cls=Function)
+init_printing()
+snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
+    .replace('^', '**') \
+    .replace('{', '(') \
+    .replace('}', ')') + ')')
+`
+endsnippet
 
-#snippet ccode "ccode block " w
-#ccode $1 ccode$0
-#endsnippet
+snippet ccode "ccode block " w
+ccode $1 ccode$0
+endsnippet
 
-#priority 10000
-#snippet 'ccode(.*)ccode' "evaluate ccode" wr
-#`!p
-#from sympy import *
-#x, y, z, t = symbols('x y z t')
-#k, m, n = symbols('k m n', integer=True)
-#f, g, h = symbols('f g h', cls=Function)
-#init_printing()
-#snip.rv = eval('ccode(' + match.group(1).replace('\\', '') \
-    #.replace('^', '**') \
-    #.replace('{', '(') \
-    #.replace('}', ')') + ')')
-#`
-#endsnippet
+priority 10000
+snippet 'ccode(.*)ccode' "evaluate ccode" wr
+`!p
+from sympy import *
+x, y, z, t = symbols('x y z t')
+k, m, n = symbols('k m n', integer=True)
+f, g, h = symbols('f g h', cls=Function)
+init_printing()
+snip.rv = eval('ccode(' + match.group(1).replace('\\', '') \
+    .replace('^', '**') \
+    .replace('{', '(') \
+    .replace('}', ')') + ')')
+`
+endsnippet
 
 snippet _ "_{}" i
 _{${1}} ${0}
