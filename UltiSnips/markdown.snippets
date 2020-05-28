@@ -145,4 +145,34 @@ snippet "tb([1-9][1-9])" "Fancy table" br
 `!p snip.rv = match.group(1)`
 endsnippet
 
+snippet td "table cell" w
+<td>${0:${VISUAL}}</td>
+endsnippet
+
+snippet tab "HTML <table>" w
+<table>
+	${0:${VISUAL}}
+</table>
+endsnippet
+
+snippet tr "table row" w
+<tr>${0:${VISUAL}}</tr>
+endsnippet
+
+snippet th "table header" w
+<th>${0:${VISUAL}}</th>
+endsnippet
+
+snippet td "table cell" w
+<td>${0:${VISUAL}}</td>
+endsnippet
+
+snippet img "<img>"
+<img src="$1" alt="$2">
+endsnippet
+
+snippet hlink "HTML <link>" w
+<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" title="${4:no title}" charset="${5:utf-8}"`!p x(snip)`>
+endsnippet
+
 # vim:ft=snippets:
