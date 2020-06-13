@@ -136,7 +136,7 @@ endsnippet
 
 snippet detail "Disclosure"
 <details${3: open=""}>
-  ${1:<summary>${2}</summary>}$0
+	${1:<summary>${2}</summary>}$0
 </details>
 endsnippet
 
@@ -147,24 +147,24 @@ endsnippet
 
 snippet tab "HTML <table>" i
 <table>
-	${0:${VISUAL}}
-</table>
+	${1:${VISUAL}}
+</table>$0
 endsnippet
 
 snippet tr "table row" i
-<tr>${0:${VISUAL}}</tr>
+<tr>${1:${VISUAL}}</tr>$0
 endsnippet
 
 snippet th "table header" i
-<th>${0:${VISUAL}}</th>
+<th>${1:${VISUAL}}</th>$0
 endsnippet
 
 snippet td "table cell" i
-<td>${0:${VISUAL}}</td>
+<td>${1:${VISUAL}}</td>$0
 endsnippet
 
 snippet img "<img>" i
-<img src="$1" alt="$2">
+<img src="$1" alt="$2">$0
 endsnippet
 
 snippet hlink "HTML <link>" i
