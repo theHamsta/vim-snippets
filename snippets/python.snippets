@@ -17,6 +17,15 @@ snippet joindir
 snippet init
 	def __init__(self, ${1}):
 		${2}
+
+snippet mock
+	import unittest.mock
+	${1} = unittest.mock.MagicMock()
+snippet fmock
+	from unittest.mock import MagicMock
+
+snippet mockimport
+	from unittest.mock import MagicMock as ${1}
 # Module Docstring
 snippet docs
 	"""
