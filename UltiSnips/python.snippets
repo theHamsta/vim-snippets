@@ -836,6 +836,10 @@ __xnew__ = staticmethod(__new_stage2__)
 __xnew_cached_ = staticmethod(cacheit(__new_stage2__))
 endsnippet
 
+snippet d "debug" b
+print(f"{${1}=}")
+endsnippet
+
 snippet %if "jinja_if" b
 {% if ${1} %}
 ${2}`!p snip.rv='\n{% else %}\n' if t[2] else ''`${3}
