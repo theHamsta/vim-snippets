@@ -563,6 +563,66 @@ snippet incg "\\includegraphics" i
 \\includegraphics[width=${1}\textwidth]{${2}}${0}
 endsnippet
 
+snippet gln "New glossary item" b
+\newglossaryentry{${1:identifier}}
+{
+  name={${2:name}},
+  first={${3:first occurrence}},
+  sort={${4:sort value}},
+  description={${0:description}},
+}
+endsnippet
+snippet glnl "New long glossary item" b
+\longnewglossaryentry{${1:identifier}}
+{
+  name={${2:name}},
+  first={${3:first occurrence}},
+  sort={${4:sort value}},
+}
+{
+  ${0:description}
+}
+endsnippet
+# Bold text
+snippet bf "Bold"
+\textbf{$1} $0
+endsnippet
+
+# Italic text
+snippet ita "Italics"
+\textit{$1} $0
+
+=======
+snippet gln "New glossary item" b
+\newglossaryentry{${1:identifier}}
+{
+  name={${2:name}},
+  first={${3:first occurrence}},
+  sort={${4:sort value}},
+  description={${0:description}},
+}
+endsnippet
+snippet glnl "New long glossary item" b
+\longnewglossaryentry{${1:identifier}}
+{
+  name={${2:name}},
+  first={${3:first occurrence}},
+  sort={${4:sort value}},
+}
+{
+  ${0:description}
+}
+endsnippet
+# Bold text
+snippet bf "Bold"
+\textbf{$1} $0
+endsnippet
+
+# Italic text
+snippet ita "Italics"
+\textit{$1} $0
+endsnippet
+
 snippet beg "\\begin" 
 \\begin{${1}}
 	${2}
