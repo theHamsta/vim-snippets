@@ -69,6 +69,18 @@ private:
 	${3}
 };
 endsnippet
+snippet rca "reinterpret_cast" i
+reinterpret_cast<${1:unsigned}>(${2:expr}${3:)}
+endsnippet
+snippet sca "static_cast" i
+static_cast<${1:unsigned}>(${2:expr}${3:)}
+endsnippet
+snippet cca "const_cast" i
+const_cast<${1:unsigned}>(${2:expr}${3:)}
+endsnippet
+snippet dca "dynamic_cast" i
+dynamic_cast<${1:unsigned}>(${2:expr}${3:)}
+endsnippet
 
 snippet mfun
 auto ${1:`!p snip.rv = snip.basename or "name"`}::${2:memberFunction}(${3})${4} -> ${5:void} 
