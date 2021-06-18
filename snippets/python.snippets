@@ -260,12 +260,13 @@ snippet main
 	import argparse
 	import logging
 
+
 	def main():
 		
 		parser = argparse.ArgumentParser()
 		parser.add_argument('--input-folder')
 		args = parser.parse_args()
-    	logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
+		logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
 
 		${1}
 
